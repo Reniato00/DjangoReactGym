@@ -1,7 +1,7 @@
 from django.urls import include, path
 from rest_framework import routers
 from .views import ClientView, ValidtyView, ClientValidityView, PlaceView, PlaceCoachView,PlaceCategoryPlaceView,CoachView,CategoryPlaceView
-
+from rest_framework.documentation import include_docs_urls
 
 router = routers.DefaultRouter()
 
@@ -15,5 +15,6 @@ router.register(r'coach',CoachView,'coach')
 router.register(r'categoryPlace',CategoryPlaceView,'categoryPlace')
 
 urlpatterns = [
-    path("api/v1/", include(router.urls))
+    path("api/v1/", include(router.urls)),
+    
 ]
