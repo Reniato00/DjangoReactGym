@@ -10,6 +10,7 @@ function App() {
         <Route path='/' element={<Navigate to="/clients"/>}/>
         <Route path='/clients' element={<ClientsPage/>}/>
         <Route path='/clients-create' element={<ClientsFormPage/>}/>
+        <Route path='/clients/:id' element={<ClientsFormPage/>}/>
       </Routes>
     </BrowserRouter>
   )
